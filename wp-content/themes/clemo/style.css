@@ -133,8 +133,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     }
 }
 
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
+.site-main .comment-navigation, .site-main,
+.posts-navigation, .site-main,
 .post-navigation {
     margin: 0 0 1.5em;
     overflow: hidden;
@@ -180,7 +180,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     clip-path: none;
     color: #21759b;
     display: block;
-    font-size: 14px;
     font-size: 0.875rem;
     font-weight: bold;
     height: auto;
@@ -746,6 +745,11 @@ nav.navbar {
 .section-title {
     padding-top: 100px;
     text-align: center;
+}
+
+p.post-date {
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 @media (max-width: 768px) {
