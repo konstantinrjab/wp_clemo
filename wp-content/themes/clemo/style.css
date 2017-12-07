@@ -632,6 +632,9 @@ nav.navbar {
     margin-bottom: 20px;
 }
 
+/*#reviews img {*/
+    /*filter: grayscale(100%);*/
+/*}*/
 @media (max-width: 768px) {
     .carousel-image-wrapper {
         height: 100px;
@@ -720,6 +723,15 @@ nav.navbar {
     height: 600px;
 }
 
+/*@media (max-width: 576px) {*/
+    /*.img-wrapper-big {*/
+        /*height: 350px;*/
+    /*}*/
+    /*.img-wrapper-small {*/
+        /*height: 220px;*/
+    /*}*/
+/*}*/
+
 .img-wrapper-small {
     height: 350px;
 }
@@ -747,7 +759,7 @@ nav.navbar {
     text-align: center;
 }
 
-p.post-date {
+p.post-subtitle {
     text-align: center;
     font-size: 1.5rem;
 }

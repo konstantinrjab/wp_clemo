@@ -1,4 +1,4 @@
-$(document).ready(function() {
+jQuery(document).ready(function ($) {
     $("#banner-owl").owlCarousel({
         // navigation: true,
         slideSpeed: 300,
@@ -16,37 +16,16 @@ $(document).ready(function() {
         autoplay: 3000,
         stopOnHover: true,
         loop: true,
-        responsiveClass:true,
-        responsive:{
-            0:{
-                items:1
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
             },
-            576:{
-                items:2
+            576: {
+                items: 2
             },
-            768:{
-                items:3
-            }
-        }
-    });
-    $("#reviews").owlCarousel({
-        navigation: false,
-        slideSpeed: 300,
-        paginationSpeed: 400,
-        items: 4,
-        autoplay: 3000,
-        stopOnHover: true,
-        loop: true,
-        responsiveClass:true,
-        responsive:{
-            0:{
-                items:2
-            },
-            576:{
-                items:3
-            },
-            768:{
-                items:4
+            768: {
+                items: 3
             }
         }
     });
@@ -58,16 +37,16 @@ $(document).ready(function() {
         // autoplay: 3000,
         stopOnHover: true,
         // loop: true,
-        responsiveClass:true,
-        responsive:{
-            0:{
-                items:2
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 2
             },
-            576:{
-                items:3
+            576: {
+                items: 3
             },
-            768:{
-                items:4
+            768: {
+                items: 4
             }
         }
     });
@@ -78,16 +57,16 @@ $(document).ready(function() {
         autoplay: 3000,
         stopOnHover: true,
         loop: true,
-        responsiveClass:true,
-        responsive:{
-            0:{
-                items:1
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
             },
-            576:{
-                items:2
+            576: {
+                items: 2
             },
-            768:{
-                items:3
+            768: {
+                items: 3
             }
         }
     });
@@ -98,39 +77,54 @@ $(document).ready(function() {
         autoplay: 3000,
         stopOnHover: true,
         loop: true,
-        responsiveClass:true,
-        responsive:{
-            0:{
-                items:1
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
             },
-            576:{
-                items:2
+            576: {
+                items: 2
             },
-            768:{
-                items:3
+            768: {
+                items: 3
             }
         }
     });
 
+    var owlReviews = $('#reviews');
+    owlReviews.on('initialized.owl.carousel', function (event) {
+        var flash = $('div.flash');
+        flash.hide();
+        flash.eq(0).show();
+    });
 
-    function init()
-    {
-        var current;
-        var post = 0;
-        setInterval(tick, 500);
-    }
+    $(owlReviews).owlCarousel({
+        navigation: false,
+        slideSpeed: 300,
+        paginationSpeed: 400,
+        items: 4,
+        autoplay: 3000,
+        stopOnHover: true,
+        loop: true,
+        center: true,
+        responsiveClass: true,
+        responsive: {
+            576: {
+                items: 3
+            },
+            768: {
+                items: 4
+            }
+        }
+    });
 
-    function tick()
-    {
-        current = $("#reviews div.owl-item.active:first .item");
-        // current.css("border", "3px solid red");
+    owlReviews.on('changed.owl.carousel', function (event) {
 
-        post = current.attr('post');
-        console.log(post);
+        var current = event.item.index;
+        var post = $(event.target).find(".owl-item").eq(current).find('img').attr('post');
 
         $("div.flash[post != '" + post + "']").hide();
-        $("div.flash[post = '" + post + "']").show();
-    }
-    init();
+        $("div.flash[post  = '" + post + "']").show();
+    });
 });
 

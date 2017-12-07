@@ -29,15 +29,5 @@
 
 <?php wp_footer(); ?>
 
-<!-- Bootstrap core JavaScript
-    ================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
-<script src="<?php bloginfo( 'template_directory' ) ?>/assets/js/jquery-3.2.1.min.js"></script>
-<script src="<?php bloginfo( 'template_directory' ) ?>/assets/js/bootstrap.bundle.min.js"></script>
-<script src="<?php bloginfo( 'template_directory' ) ?>/assets/css/owlcarousel/owl.carousel.min.js"></script>
-
-<script src="<?php bloginfo( 'template_directory' ) ?>/assets/js/main.js"></script>
-
 </body>
 </html>

@@ -30,7 +30,7 @@
     <link href="<?php bloginfo('stylesheet_directory') ?>/assets/css/font-awesome.min.css"
           rel="stylesheet">
     <link href="<?php bloginfo('stylesheet_directory') ?>/assets/fonts/fontawesome-webfont.woff2"
-          rel="stylesheet">
+          rel="text/css">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">

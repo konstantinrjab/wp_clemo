@@ -19,7 +19,7 @@
 				the_title( '<h2 class="entry-title section-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			endif;
 			?>
-            <p class="post-date"><?php echo get_the_date(); ?></p>
+            <p class="post-subtitle"><?php echo get_the_date(); ?></p>
 			<?php
 			if ( 'post' === get_post_type() ) : ?>
                 <div class="entry-meta">
@@ -34,6 +34,13 @@
 				<?php if ( has_post_thumbnail() ) :   //check for feature image ?>
                     <div class="text-center"><?php the_post_thumbnail( 'large' ); ?></div>
 				<?php endif; ?>
+
+                <div class="hr"></div>
+
+                <?php if(get_field('subtitle')) : ?>
+                    <p class="post-subtitle"><?php the_field('subtitle') ?></p>
+                <?php endif; ?>
+
 				<?php
 				the_content( sprintf(
 					wp_kses(
@@ -54,6 +61,18 @@
 				) );
 				?>
             </div>
+	        <?php
+            if ( get_post_gallery() ) :
+            $gallery = get_post_gallery( get_the_ID(), false );
+
+            var_dump($gallery);
+            /* Loop through all the image and output them one by one */
+            foreach( $gallery['src'] as $src ) : ?>
+            <img src="<?php echo $src; ?>" class="my-custom-class" alt="Gallery image" />
+
+	        <?php endforeach; ?>
+            <?php endif; ?>
+
         </div><!-- .entry-content -->
 
         <footer class="entry-footer">
