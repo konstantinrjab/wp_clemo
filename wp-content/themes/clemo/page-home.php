@@ -13,7 +13,6 @@ get_header(); ?>
 <?php
 $num_services = 2;
 include( locate_template( 'template-parts/content-gallery.php' ) ); ?>
-<?php //get_template_part( 'template-parts/content', 'gallery_small' ); ?>
 
 <?php get_template_part( 'template-parts/content', 'team' ); ?>
 
