@@ -1,16 +1,12 @@
 <?php
 /*
-	The template name: Home Page
+	The template name: About Us
 */
 
 
 get_header(); ?>
 
-<?php get_template_part( 'template-parts/content', 'skills' ); ?>
-
 <?php get_template_part( 'template-parts/content', 'services' ); ?>
-
-<?php get_template_part( 'template-parts/content', 'gallery_small' ); ?>
 
 <?php get_template_part( 'template-parts/content', 'team' ); ?>
 

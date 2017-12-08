@@ -4,6 +4,7 @@ $loop = new WP_Query( array(
 	'orderby'   => 'post_id',
 	'order'     => 'ASC'
 ) ); ?>
+<!--REVIEWS-->
 <section class="reviews pb100">
     <div class="container">
         <h1 class="section-title pb50"><?php the_field( 'reviews_section_title' ); ?></h1>

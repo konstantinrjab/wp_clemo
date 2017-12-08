@@ -160,12 +160,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-function my_acf_init() {
-
-	acf_update_setting('google_api_key', 'AIzaSyCI6IYsgZVHRI_S9aH_Ji0jy-pSz4on9EI');
-}
-
-add_action('acf/init', 'my_acf_init');
 
 function add_custom_css() {
 	//bootstrap
@@ -193,7 +187,6 @@ function add_custom_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'add_custom_scripts' );
 
-
 function theme_slug_setup() {
 	add_theme_support('custom-logo', array(
 		'height' => 100,
@@ -202,4 +195,3 @@ function theme_slug_setup() {
 		'flex-height' => true,
 	));
 }
-

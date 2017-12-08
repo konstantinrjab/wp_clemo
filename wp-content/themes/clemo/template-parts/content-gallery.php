@@ -17,7 +17,7 @@ $count = 0;
 <!--Gallery-->
 <section class="gallery">
     <div class="container">
-        <h1 class="section-title"><?php the_field( 'gallery_title' ); ?></h1>
+        <h1 class="section-title"><?php the_field( 'work_section_header' ); ?></h1>
 
 		<?php while ( $loop->have_posts() ) :
 			$loop->the_post(); ?>
@@ -37,7 +37,7 @@ $count = 0;
 			}
 
 			if ( $count == 1 || $count % 7 == 0 ) { //create block
-				echo '<div class="row">';
+				echo '<div class="row pt100">';
 			} ?>
 
 			<?php if ( $count % 2 ) {
@@ -55,7 +55,8 @@ $count = 0;
             </div>
 			<?php if ( $count % 2 == 0 ) {
 			echo '</div>';
-		}
+		} ?>
+        <?php
 			if ( $count % 6 == 0 ) {
 				echo '<button class="btn btn-default btn-black mt30 mb50 margin-auto">view more</button>';
 				echo '</div>';          //end of the block
