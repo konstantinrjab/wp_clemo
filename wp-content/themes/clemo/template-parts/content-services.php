@@ -2,8 +2,6 @@
 $count = 0;
 if ( get_page_template_slug() == 'page-home.php' ) {
 	$posts_per_page = 2;
-} else {
-	$posts_per_page = 0;
 }
 
 $loop  = new WP_Query( array(
@@ -44,7 +42,6 @@ $loop  = new WP_Query( array(
                         </a>
                     </h2>
                     <div class="hr"></div>
-<!--                    <p>--><?php //the_field( 'service_text' ); ?><!--</p>-->
                     <p><?php the_content(); ?></p>
 					<?php if ( get_field( 'service_add_a_button' ) ) : ?>
                         <form action="<?php the_field( 'service_button_link' ); ?>">
