@@ -7,7 +7,7 @@ $loop = new WP_Query( array(
 <!--REVIEWS-->
 <section class="reviews pb100">
     <div class="container">
-        <h1 class="section-title pb50"><?php the_field( 'reviews_section_title' ); ?></h1>
+        <h1 class="section-title pb50"><?php the_field( 'reviews_section_header' ); ?></h1>
         <div class="row">
 			<?php while ( $loop->have_posts() ) :
 				$loop->the_post(); ?>

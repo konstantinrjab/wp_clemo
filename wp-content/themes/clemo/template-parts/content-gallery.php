@@ -17,7 +17,7 @@ $count = 0;
 <!--Gallery-->
 <section class="gallery">
     <div class="container">
-        <h1 class="section-title"><?php the_field( 'work_section_header' ); ?></h1>
+        <h1 class="section-title"><?php the_field( 'works_section_header' ); ?></h1>
 
 		<?php while ( $loop->have_posts() ) :
 			$loop->the_post(); ?>

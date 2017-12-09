@@ -381,7 +381,7 @@ a {
 }
 
 a:hover {
-    color: #ffe1bd !important;
+    color: #ffe1bd;
     text-decoration: none;
 }
 
@@ -393,7 +393,7 @@ img {
 }
 
 .thumbnail-wrapper img {
-    max-height: 300px;
+    max-height: 400px;
 }
 
 div.hr {
@@ -477,10 +477,6 @@ p button {
     .pb50 {
         padding-bottom: 20px;
     }
-}
-
-.mt0 {
-    margin-top: 0 !important;
 }
 
 @media (max-width: 576px) {
@@ -648,7 +644,7 @@ nav.navbar {
 }
 
 .popup a:hover {
-    color: white !important;
+    color: white;
 }
 
 .img-wrapper {
@@ -660,7 +656,7 @@ nav.navbar {
 
 @media (max-width: 768px) {
     .img-wrapper {
-        height: 350px !important;
+        height: 350px;
     }
 }
 
@@ -679,17 +675,17 @@ nav.navbar {
 }
 
 .img-wrapper-big {
-    height: 600px;
+    height: 500px;
 }
 
-/*@media (max-width: 576px) {*/
-    /*.img-wrapper-big {*/
-        /*height: 350px;*/
-    /*}*/
-    /*.img-wrapper-small {*/
-        /*height: 220px;*/
-    /*}*/
-/*}*/
+@media (max-width: 576px) {
+    .img-wrapper-big {
+        height: 300px;
+    }
+    .img-wrapper-small {
+        height: 180px;
+    }
+}
 
 .img-wrapper-small {
     height: 350px;
