@@ -14,10 +14,10 @@ $loop = new WP_Query( array(
 <section class="contacts <?php echo $class; ?> pb100">
     <div class="container">
         <div class="row">
+            <div class="col-12">
+                <h2 class="section-title pb50"><?php the_field( 'header' ); ?></h2></div>
 			<?php while ( $loop->have_posts() ) :
 				$loop->the_post(); ?>
-                <div class="col-12">
-                    <h2 class="section-title pb50"><?php the_field( 'contact_title' ); ?></h2></div>
                 <div class="col-sm-6">
                     <div class="text-wrapper"><i class="fa fa-map-marker"></i>
                         <p class="icon-left"><?php the_field( 'contact_address' ); ?></p>

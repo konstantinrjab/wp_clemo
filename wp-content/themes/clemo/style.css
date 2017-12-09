@@ -586,6 +586,10 @@ nav.navbar {
     width: 170px;
     margin-bottom: 20px;
 }
+.carousel-image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+}
 
 /*#reviews img {*/
     /*filter: grayscale(100%);*/

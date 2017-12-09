@@ -16,7 +16,7 @@ $loop  = new WP_Query( array(
 <!--SERVICES-->
 <section class="services">
     <div class="container">
-        <h1 class="section-title"><?php the_field( 'services_section_header' ); ?></h1>
+        <h1 class="section-title"><?php the_field( 'header' ); ?></h1>
 
 		<?php while ( $loop->have_posts() ) :
 			$loop->the_post(); ?>

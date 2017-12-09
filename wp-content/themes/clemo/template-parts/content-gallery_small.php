@@ -12,7 +12,7 @@ $count          = 0;
 <!--Gallery-->
 <section class="gallery">
     <div class="container">
-        <h1 class="section-title"><?php the_field( 'work_section_header' ); ?></h1>
+        <h1 class="section-title"><?php the_field( 'header' ); ?></h1>
 
 		<?php while ( $loop->have_posts() ) :
 			$loop->the_post(); ?>
@@ -52,14 +52,14 @@ $count          = 0;
 			echo '</div>';
 		} ?>
 			<?php
-			if ( $count % 6 == 0 ) {
-				echo '<button class="btn btn-default btn-black mt30 mb50 margin-auto">view more</button>';
-				echo '</div>';          //end of the block
-			} ?>
+			if ( $count % 6 == 0 ) : ?>
+				<a href="<?php echo esc_url( get_page_link( 120 ) ); ?>" class="btn btn-default btn-black mt30 mb50 margin-auto">view more</a>
+				</div><!-- gallery -->
+			<?php endif; ?>
 		<?php endwhile; ?>
 
 		<?php
 		wp_reset_query(); ?>
 
-    </div>
+    </div><!-- container -->
 </section>

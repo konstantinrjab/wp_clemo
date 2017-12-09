@@ -115,9 +115,9 @@ jQuery(document).ready(function ($) {
             576: {
                 items: 3
             },
-            768: {
-                items: 4
-            }
+            // 768: {
+            //     items: 4
+            // }
         }
     });
 
