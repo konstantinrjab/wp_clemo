@@ -175,6 +175,8 @@ function add_custom_css() {
 add_action( 'wp_enqueue_scripts', 'add_custom_css' );
 
 function add_custom_scripts() {
+
+//	wp_deregister_script( 'jquery' );
 	wp_register_script('jquery', get_template_directory_uri() . '/assets/js/jquery-3.2.1.min.js', array( 'jquery' ), '3.2.1', true);
 	wp_register_script('owl-carousel', home_url() . '/wp-content/themes/clemo/assets/css/owlcarousel/owl.carousel.min.js');
 	wp_register_script('bootstrap', home_url() . '/wp-content/themes/clemo/assets/js/bootstrap.bundle.min.js');
