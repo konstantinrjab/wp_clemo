@@ -6,17 +6,24 @@
  *
  * @package clemo
  */
+if ( $wp_query->current_post % 2 ) {
+	$class_img  = ' order-1 order-sm-2 ';
+	$class_text = ' order-2 order-sm-1 ';
 
-?>
+} else {
+	$class_img  = '';
+	$class_text = '';
+} ?>
+
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="row">
-        <div class="col-sm-6 ">
+        <div class="col-sm-6 <?=$class_img;?>">
 			<?php if ( has_post_thumbnail() ) :   //check for feature image ?>
                 <div class="img-wrapper"><?php the_post_thumbnail( 'large' ); ?></div>
 			<?php endif; ?>
         </div>
-        <div class="col-sm-6 ">
+        <div class="col-sm-6 <?=$class_text;?>">
 
             <header class="entry-header">
 				<?php
@@ -26,7 +33,7 @@
 					the_title( '<h3 class="entry-title post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 				endif;
 				?>
-<!--                <p class="post-subtitle">--><?php //echo the_date(); ?><!--</p>-->
+                <!--                <p class="post-subtitle">--><?php //echo the_date(); ?><!--</p>-->
 				<?php
 				if ( 'post' === get_post_type() ) : ?>
                     <div class="entry-meta">
@@ -79,9 +86,9 @@
 
             </div><!-- .entry-content -->
 
-<!--            <footer class="entry-footer">-->
-<!--				--><?php //clemo_entry_footer(); ?>
-<!--            </footer><!-- .entry-footer -->
+            <!--            <footer class="entry-footer">-->
+            <!--				--><?php //clemo_entry_footer(); ?>
+            <!--            </footer><!-- .entry-footer -->
         </div>
     </div>
 </article><!-- #post-<?php the_ID(); ?> -->
