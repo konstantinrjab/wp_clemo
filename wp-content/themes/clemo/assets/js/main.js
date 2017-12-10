@@ -51,22 +51,23 @@ jQuery(document).ready(function ($) {
         }
     });
     $("#related-posts").owlCarousel({
-        // navigation: true,
+        navigation: false,
         slideSpeed: 300,
         paginationSpeed: 400,
-        autoplay: 3000,
+        items: 4,
+        // autoplay: 3000,
         stopOnHover: true,
-        loop: true,
+        // loop: true,
         responsiveClass: true,
         responsive: {
             0: {
-                items: 1
-            },
-            576: {
                 items: 2
             },
-            768: {
+            576: {
                 items: 3
+            },
+            768: {
+                items: 4
             }
         }
     });
@@ -114,10 +115,7 @@ jQuery(document).ready(function ($) {
             },
             576: {
                 items: 3
-            },
-            // 768: {
-            //     items: 4
-            // }
+            }
         }
     });
 

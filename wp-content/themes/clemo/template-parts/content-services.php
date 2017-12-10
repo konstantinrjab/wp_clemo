@@ -1,14 +1,13 @@
 <?php
-$count = 0;
 if ( get_page_template_slug() == 'page-home.php' ) {
 	$posts_per_page = 2;
 }
 
-$loop  = new WP_Query( array(
-	'post_type' => 'service',
+$loop = new WP_Query( array(
+	'post_type'      => 'service',
 	'posts_per_page' => $posts_per_page,
-	'orderby'   => 'post_id',
-	'order'     => 'DESC'
+	'orderby'        => 'post_id',
+	'order'          => 'DESC'
 ) ); ?>
 
 <!--SERVICES-->
@@ -16,16 +15,18 @@ $loop  = new WP_Query( array(
     <div class="container">
         <h1 class="section-title"><?php the_field( 'services_section_header' ); ?></h1>
 
-		<?php while ( $loop->have_posts() ) :
+		<?php
+		$count = 1;
+		while ( $loop->have_posts() ) :
 			$loop->the_post(); ?>
 
 			<?php $count ++; ?>
             <div class="row pt100">
-				<?php if ( $count & 1 ) {
-					$class_img = ' order-1 order-sm-2 ';
+				<?php if ( $count % 2 ) {
+					$class_img  = ' order-1 order-sm-2 ';
 					$class_text = ' order-2 order-sm-1 ';
 				} else {
-					$class_img = '';
+					$class_img  = '';
 					$class_text = '';
 				} ?>
 

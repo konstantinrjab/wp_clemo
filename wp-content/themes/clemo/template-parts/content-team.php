@@ -4,7 +4,7 @@
 	'order'     => 'ASC'
 ) ); ?>
 
-<!--BEST TEAM-->
+<!--TEAM-->
 <section class="best-team bisque pb100">
     <h1 class="section-title pb50"><?php the_field( 'team_section_header' ); ?></h1>
     <div class="owl-carousel owl-theme" id="best-team-owl">

@@ -8,7 +8,7 @@
  */
 
 get_header();
-echo 'single-post.php';?>
+echo '1single-post.php';?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">

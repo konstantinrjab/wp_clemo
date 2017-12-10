@@ -12,25 +12,28 @@
  * @package clemo
  */
 
-get_header();?>
+get_header();
+echo 'index'; ?>
 
-    <section class="blog pb50">
+    <section class="blog pb50 border-top border-bottom">
         <div class="container">
             <h1 class="section-title">blog</h1>
             <ul class="list-inline text-center pt50 pb50">
-            <?php $categories = get_categories();
-            foreach( $categories as $category ) {
-	            $category_link = sprintf(
-		            '<a href="%1$s" alt="%2$s">%3$s</a>',
-		            esc_url( get_category_link( $category->term_id ) ),
-		            esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ),
-		            esc_html( $category->name )
-	            );
+                <li class="list-inline-item ml-3 nav-item">
+                    <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">all</a></li>
+				<?php $categories = get_categories();
+				foreach ( $categories as $category ) {
+					$category_link = sprintf(
+						'<a href="%1$s" alt="%2$s">%3$s</a>',
+						esc_url( get_category_link( $category->term_id ) ),
+						esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ),
+						esc_html( $category->name )
+					);
 
-	            echo '<li class="list-inline-item ml-3 nav-item">' . sprintf( esc_html__( '%s', 'textdomain' ), $category_link ) . '</li> ';
+					echo '<li class="list-inline-item ml-3 nav-item">' . sprintf( esc_html__( '%s', 'textdomain' ), $category_link ) . '</li> ';
 //	            echo '<p>' . sprintf( esc_html__( 'Description: %s', 'textdomain' ), $category->description ) . '</p>';
 //	            echo '<p>' . sprintf( esc_html__( 'Post Count: %s', 'textdomain' ), $category->count ) . '</p>';
-            } ?>
+				} ?>
             </ul>
 
 			<?php
@@ -66,8 +69,6 @@ get_header();?>
 			endif; ?>
         </div>
     </section>
-    <aside></aside>
-
 
 <?php
 get_footer();
