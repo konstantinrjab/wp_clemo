@@ -12,7 +12,8 @@
  * @package clemo
  */
 
-get_header(); ?>
+get_header();
+echo 'post.php';?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
@@ -34,5 +35,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-//get_sidebar();
+get_sidebar();
 get_footer();

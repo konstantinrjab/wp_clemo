@@ -6,7 +6,7 @@
  *
  * @package clemo
  */
-
+echo 'content-page.php';
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
