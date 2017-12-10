@@ -20,7 +20,8 @@ echo 'index'; ?>
             <h1 class="section-title">blog</h1>
             <ul class="list-inline text-center pt50 pb50">
                 <li class="list-inline-item ml-3 nav-item">
-                    <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">all</a></li>
+                    <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">all</a>
+                </li>
 				<?php $categories = get_categories();
 				foreach ( $categories as $category ) {
 					$category_link = sprintf(

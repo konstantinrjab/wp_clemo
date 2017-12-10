@@ -32,7 +32,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments " class="comments-area">
 
 	<?php
 	if ( have_comments() ) : ?>
@@ -59,14 +59,14 @@ if ( post_password_required() ) {
 
 			<?php the_comments_navigation(); ?>
 
-            <ul class="comment-list list-unstyled">
+            <ol class="comment-list list-unstyled">
 				<?php
 				wp_list_comments( array(
-					'style'      => 'ul',
+					'style'      => 'li',
 					'short_ping' => true,
 				) );
 				?>
-            </ul><!-- .comment-list -->
+            </ol>
 
 			<?php the_comments_navigation();
 
