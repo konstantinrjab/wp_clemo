@@ -30,19 +30,49 @@ get_header();
     </div>
 
     <!--RELATED POSTS-->
+<?php
+//$cat              = '';
+//			echo $categories[0]->name;
+//foreach ( $categories as $category ) {
+//	$cat += $category->name;
+//
+//}
+//echo $cat;
+?>
+<?php
+$categories = get_the_category();
+var_dump( $categories );
+
+$post = get_posts( array(
+	'numberposts'   => 10,
+	'offset'        => 0,
+//	'category_name' => $categories[1]->id,
+	'category__and' => array($categories),
+	'post_status'   => 'publish',
+	'order'         => 'ASC'
+) );;
+//var_dump( $post );
+?>
 
     <div class="best-team bisque pb100">
-        <h1 class="section-title pb50">posts in this category</h1>
-        <div class="owl-carousel owl-theme" id="related-posts">
-	        <?php $categories = get_the_category();
-	        foreach ( $categories as $category ) : ?>
+        <div class="container">
+            <h1 class="section-title pb50">posts in this category</h1>
+            <div class="owl-carousel owl-theme" id="related-posts">
 
-                <div class="item text-center">
-                    <?=$category->name;?>
+				<?php foreach ( $post as $key ) : ?>
+                    <div class="item ">
+                        <h3 class="post-title bold">
+                            <a href="<?= $key->guid ?>"><?= $key->post_title; ?></a>
+                        </h3>
 
-                </div>
-	        <?php endforeach; ?>
+                        <div class="hr "></div>
+                        <h4 class="post-subtitle mt-3"><?=$key->post_date; ?></h4>
 
+                    </div>
+				<?php endforeach; ?>
+
+
+            </div>
         </div>
     </div>
 <?php //the_post_navigation(); ?>

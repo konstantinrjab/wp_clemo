@@ -844,3 +844,7 @@ textarea#comment {
 #comments {
     /*width: 100%;*/
 }
+
+.bisque .post-title a:hover{
+    color: white;
+}
