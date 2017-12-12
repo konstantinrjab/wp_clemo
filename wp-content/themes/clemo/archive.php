@@ -9,15 +9,15 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<section class="border-top border-bottom">
+		<main id="main" class="container">
 
 		<?php
 		if ( have_posts() ) : ?>
 
-			<header class="page-header">
+			<header class="page-header pb50">
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_title( '<h1 class="section-title">', '</h1>' );
 					the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
@@ -44,8 +44,8 @@ get_header(); ?>
 		endif; ?>
 
 		</main><!-- #main -->
-	</div><!-- #primary -->
+    </section><!-- #primary -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();
