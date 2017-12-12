@@ -12,8 +12,7 @@
  * @package clemo
  */
 
-get_header();
-echo 'index'; ?>
+get_header();?>
 
     <section class="blog pb50 border-top border-bottom">
         <div class="container">

@@ -24,12 +24,12 @@
                 wp_reset_query(); //resetting the page query
                 ?>
 
-                <?php if (get_field('about_us_add_a_button')) : ?>
-                    <form action="<?php the_field('about_us_button_link'); ?>">
-                        <input class="btn btn-default btn-white mt50" type="submit"
-                               value="<?php the_field('about_us_button_text'); ?>"/>
-                    </form>
-                <?php endif; ?>
+<!--                --><?php //if (get_field('about_us_add_a_button')) : ?>
+<!--                    <form action="--><?php //the_field('about_us_button_link'); ?><!--">-->
+<!--                        <input class="btn btn-default btn-white mt50" type="submit"-->
+<!--                               value="--><?php //the_field('about_us_button_text'); ?><!--"/>-->
+<!--                    </form>-->
+<!--                --><?php //endif; ?>
             </div>
         </div>
 
