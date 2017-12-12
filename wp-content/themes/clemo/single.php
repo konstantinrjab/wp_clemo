@@ -14,44 +14,42 @@ get_header();
     <div class="container">
         <div class="row" id="primary">
 
-			<?php
-			while ( have_posts() ) : the_post();
+            <?php
+            while (have_posts()) : the_post();
 
-				get_template_part( 'template-parts/content', 'single' );
+                get_template_part('template-parts/content', 'single');
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				?>
-				<?php if ( comments_open() || get_comments_number() ) : ?>
+                // If comments are open or we have at least one comment, load up the comment template.
+                ?>
+                <?php if (comments_open() || get_comments_number()) : ?>
                     <div class="w-100"><?php comments_template(); ?></div>
-				<?php endif; ?>
-			<?php endwhile; // End of the loop.?>
+                <?php endif; ?>
+            <?php endwhile; ?>
 
         </div>
     </div>
 
     <!--RELATED POSTS-->
 <?php
-//$cat              = '';
-//			echo $categories[0]->name;
-//foreach ( $categories as $category ) {
-//	$cat += $category->name;
-//
-//}
-//echo $cat;
+$categories = get_the_category();
+
+$cat = '';
+foreach ($categories as $category) {
+    $cat .= $category->cat_ID . ', ';
+
+}
 ?>
 <?php
 $categories = get_the_category();
-var_dump( $categories );
 
-$post = get_posts( array(
-	'numberposts'   => 10,
-	'offset'        => 0,
-//	'category_name' => $categories[1]->id,
-	'category__and' => array($categories),
-	'post_status'   => 'publish',
-	'order'         => 'ASC'
-) );;
-//var_dump( $post );
+$post = get_posts(array(
+    'numberposts' => 10,
+    'offset' => 0,
+    'cat' => $cat,
+    'post__not_in' => array(get_the_id()),
+    'post_status' => 'publish',
+    'order' => 'ASC'
+));;
 ?>
 
     <div class="best-team bisque pb100">
@@ -59,17 +57,17 @@ $post = get_posts( array(
             <h1 class="section-title pb50">posts in this category</h1>
             <div class="owl-carousel owl-theme" id="related-posts">
 
-				<?php foreach ( $post as $key ) : ?>
+                <?php foreach ($post as $key) : ?>
                     <div class="item ">
                         <h3 class="post-title bold">
                             <a href="<?= $key->guid ?>"><?= $key->post_title; ?></a>
                         </h3>
 
                         <div class="hr "></div>
-                        <h4 class="post-subtitle mt-3"><?=$key->post_date; ?></h4>
+                        <h4 class="post-subtitle mt-3"><?= date('Y-m-d', strtotime($key->post_date)); ?></h4>
 
                     </div>
-				<?php endforeach; ?>
+                <?php endforeach; ?>
 
 
             </div>
