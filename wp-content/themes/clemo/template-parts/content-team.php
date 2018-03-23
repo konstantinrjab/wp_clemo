@@ -5,8 +5,8 @@
 ) ); ?>
 
 <!--TEAM-->
-<section class="best-team bisque pb100">
-    <h1 class="section-title pb50"><?php the_field( 'team_section_header' ); ?></h1>
+<section class="best-team bisque pb-5">
+    <h1 class="section-title"><?php the_field( 'team_section_header' ); ?></h1>
     <div class="owl-carousel owl-theme" id="best-team-owl">
 		<?php while ( $loop->have_posts() ) :
 			$loop->the_post(); ?>

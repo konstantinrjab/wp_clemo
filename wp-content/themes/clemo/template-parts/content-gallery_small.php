@@ -32,7 +32,7 @@ $count          = 0;
 			}
 
 			if ( $count == 1 || $count % 7 == 0 ) { //create block
-				echo '<div class="row pt100">';
+				echo '<div class="row">';
 			} ?>
 
 			<?php if ( $count % 2 ) {

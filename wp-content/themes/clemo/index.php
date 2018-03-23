@@ -12,63 +12,63 @@
  * @package clemo
  */
 
-get_header();?>
+get_header(); ?>
 
-    <section class="blog pb50 border-top border-bottom">
-        <div class="container">
-            <h1 class="section-title">blog</h1>
-            <ul class="list-inline text-center pt50 pb50">
-                <li class="list-inline-item ml-3 nav-item">
-                    <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">all</a>
-                </li>
-				<?php $categories = get_categories();
-				foreach ( $categories as $category ) {
-					$category_link = sprintf(
-						'<a href="%1$s" alt="%2$s">%3$s</a>',
-						esc_url( get_category_link( $category->term_id ) ),
-						esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ),
-						esc_html( $category->name )
-					);
+  <section class="blog pb50 border-top border-bottom">
+    <div class="container">
+      <h1 class="section-title">blog</h1>
+      <ul class="list-inline text-center pt50 pb50">
+        <li class="list-inline-item ml-3 nav-item">
+          <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>">all</a>
+        </li>
+		  <?php $categories = get_categories();
+		  foreach ($categories as $category) {
+			  $category_link = sprintf(
+				  '<a href="%1$s" alt="%2$s">%3$s</a>',
+				  esc_url(get_category_link($category->term_id)),
+				  esc_attr(sprintf(__('View all posts in %s', 'textdomain'), $category->name)),
+				  esc_html($category->name)
+			  );
 
-					echo '<li class="list-inline-item ml-3 nav-item">' . sprintf( esc_html__( '%s', 'textdomain' ), $category_link ) . '</li> ';
+			  echo '<li class="list-inline-item ml-3 nav-item">'.sprintf(esc_html__('%s', 'textdomain'), $category_link).'</li> ';
 //	            echo '<p>' . sprintf( esc_html__( 'Description: %s', 'textdomain' ), $category->description ) . '</p>';
 //	            echo '<p>' . sprintf( esc_html__( 'Post Count: %s', 'textdomain' ), $category->count ) . '</p>';
-				} ?>
-            </ul>
+		  } ?>
+      </ul>
+
+		<?php
+		if (have_posts()) :
+
+			if (is_home() && !is_front_page()) : ?>
+              <header>
+                <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+              </header>
 
 			<?php
-			if ( have_posts() ) :
+			endif;
 
-				if ( is_home() && ! is_front_page() ) : ?>
-                    <header>
-                        <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-                    </header>
+			/* Start the Loop */
+			while (have_posts()) : the_post();
 
-				<?php
-				endif;
+				/*
+				   * Include the Post-Format-specific template for the content.
+				   * If you want to override this in a child theme, then include a file
+				   * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+				   */
 
-				/* Start the Loop */
-				while ( have_posts() ) : the_post();
+				get_template_part('template-parts/content', get_post_format());
 
-					/*
-					 * Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
+			endwhile;
 
-					get_template_part( 'template-parts/content', get_post_format() );
+			the_posts_navigation();
 
-				endwhile;
+		else :
 
-				the_posts_navigation();
+			get_template_part('template-parts/content', 'none');
 
-			else :
-
-				get_template_part( 'template-parts/content', 'none' );
-
-			endif; ?>
-        </div>
-    </section>
+		endif; ?>
+    </div>
+  </section>
 
 <?php
 get_footer();

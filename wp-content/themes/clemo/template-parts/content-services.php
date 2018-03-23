@@ -11,7 +11,7 @@ $loop = new WP_Query( array(
 ) ); ?>
 
 <!--SERVICES-->
-<section class="services pb50">
+<section class="services">
     <div class="container">
         <h1 class="section-title"><?php the_field( 'services_section_header' ); ?></h1>
 
@@ -21,21 +21,21 @@ $loop = new WP_Query( array(
 			$loop->the_post(); ?>
 
 			<?php $count ++; ?>
-            <div class="row pt100">
+            <div class="row">
 				<?php if ( $count % 2 ) {
-					$class_img  = ' order-1 order-sm-2 ';
-					$class_text = ' order-2 order-sm-1 ';
+					$class_img  = ' order-1 order-md-2 ';
+					$class_text = ' order-2 order-md-1 ';
 				} else {
 					$class_img  = '';
 					$class_text = '';
 				} ?>
 
-                <div class="col-sm-6 thumbnail-wrapper <?php echo $class_img; ?>">
+                <div class="col-md-6 thumbnail-wrapper <?php echo $class_img; ?>">
 					<?php if ( has_post_thumbnail() ) {  //check for feature image
 						the_post_thumbnail();
 					} ?>
                 </div>
-                <div class="col-sm-6 <?php echo $class_text; ?>">
+                <div class="col-md-6 <?php echo $class_text; ?>">
                     <h2 class="title">
                         <a href="<?php the_permalink(); ?>">
                             <small><?php the_field( 'service_subtitle' ); ?></small>
@@ -46,7 +46,7 @@ $loop = new WP_Query( array(
                     <p><?php the_content(); ?></p>
 					<?php if ( get_field( 'service_add_a_button' ) ) : ?>
                         <form action="<?php the_field( 'service_button_link' ); ?>">
-                            <input class="btn btn-default btn-white mt50" type="submit"
+                            <input class="btn btn-default btn-white mt50 center-block" type="submit"
                                    value="<?php the_field( 'service_button_text' ); ?>"/>
                         </form>
 					<?php endif; ?>

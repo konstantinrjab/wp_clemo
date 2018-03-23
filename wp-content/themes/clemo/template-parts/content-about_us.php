@@ -3,8 +3,8 @@
     <div class="container">
         <h1 class="section-title"><?php the_field( 'about_us_section_header' ); ?></h1>
 
-        <div class="row pt100">
-            <div class="col-sm-6 thumbnail-wrapper ">
+        <div class="row">
+            <div class="col-md-6 thumbnail-wrapper ">
 				<?php if ( has_post_thumbnail() ) :   //check for feature image ?>
                     <div class="text-center"><?php the_post_thumbnail( 'large' ); ?></div>
 				<?php endif; ?>
@@ -13,7 +13,7 @@
 					<?php the_field( 'about_us_subtitle' ); ?>
                 </h2>
             </div>
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <div class="hr mt-0"></div>
 				<?php while ( have_posts() ) : the_post(); ?>
                     <div class="entry-content-page">
