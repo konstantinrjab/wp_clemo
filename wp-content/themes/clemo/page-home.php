@@ -3,20 +3,18 @@
 	The template name: Home Page
 */
 
+get_header();
 
-get_header(); ?>
+get_template_part( 'template-parts/content', 'skills' );
 
-<?php get_template_part( 'template-parts/content', 'skills' ); ?>
+get_template_part( 'template-parts/content', 'services' );
 
-<?php get_template_part( 'template-parts/content', 'services' ); ?>
+get_template_part( 'template-parts/content', 'gallery_small' );
 
-<?php get_template_part( 'template-parts/content', 'gallery_small' ); ?>
+get_template_part( 'template-parts/content', 'team' );
 
-<?php get_template_part( 'template-parts/content', 'team' ); ?>
+get_template_part( 'template-parts/content', 'reviews' );
 
-<?php get_template_part( 'template-parts/content', 'reviews' ); ?>
+get_template_part( 'template-parts/content', 'contacts' );
 
-<?php get_template_part( 'template-parts/content', 'contacts' ); ?>
-
-
-<?php get_footer();
+get_footer();

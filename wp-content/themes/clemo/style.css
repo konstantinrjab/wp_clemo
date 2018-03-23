@@ -548,6 +548,8 @@ nav.navbar {
 
 #menu-main-menu li.menu-item {
     color: rgba(0, 0, 0, 0.5);
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
 #banner-owl {
