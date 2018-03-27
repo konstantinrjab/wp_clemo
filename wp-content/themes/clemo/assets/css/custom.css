@@ -43,8 +43,8 @@ div.hr {
 
 @media (max-width: 576px) {
   .sm-center {
-    margin: auto !important;
-    text-align: center !important; } }
+    margin: auto;
+    text-align: center; } }
 
 p button {
   margin-left: 1px; }
@@ -115,8 +115,8 @@ a.nav-item.active {
   background-size: 20px 2px; }
 
 a.nav-item {
-  padding-left: 0 !important;
-  padding-right: 30px !important; }
+  padding-left: 0;
+  padding-right: 30px; }
 
 #banner-owl {
   position: relative;
@@ -179,6 +179,9 @@ a.nav-item {
 .black .btn-white:hover {
   background-color: #ffe1bd; }
 
+.thumbnail-wrapper img {
+  max-height: 400px; }
+
 .gallery-wrapper {
   margin-bottom: 20px; }
 
@@ -236,13 +239,13 @@ a.nav-item {
       margin-bottom: 30px; } }
 
 .section-title {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 70px;
+  padding-bottom: 70px;
   text-align: center; }
   @media (max-width: 768px) {
     .section-title {
-      padding-top: 50px;
-      padding-bottom: 50px; } }
+      padding-top: 30px;
+      padding-bottom: 30px; } }
 
 section.black {
   background-color: black;
@@ -301,5 +304,73 @@ p.icon-left {
 
 .quote {
   margin-left: -50px; }
+
+/* NAVBAR */
+#menu-main-menu li {
+  margin-left: 30px; }
+
+#menu-main-menu li.page_item.current_page_item {
+  color: black;
+  background: linear-gradient(black, black) left bottom no-repeat;
+  background-size: 20px 2px; }
+
+#menu-main-menu li.page_item.current_page_item:hover {
+  background: linear-gradient(#ffe1bd, #ffe1bd) left bottom no-repeat;
+  background-size: 20px 2px; }
+
+#menu-main-menu li.menu-item {
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+.carousel-image-wrapper img {
+  max-width: 100%;
+  max-height: 100%; }
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%; }
+
+.gallery .img-wrapper img {
+  width: 100%;
+  height: 100%; }
+
+p.post-subtitle {
+  font-size: 1.5rem; }
+
+.share-wrapper:last-child {
+  margin-right: 0; }
+
+blockquote {
+  margin-left: 50px;
+  font-weight: bold;
+  font-size: 21px;
+  background: linear-gradient(black, black) left top no-repeat;
+  background-size: 40px 2px;
+  padding-top: 10px; }
+
+.left-half {
+  text-align: right;
+  padding-right: 30px; }
+
+.left-half p {
+  min-height: 60px; }
+
+.post-title {
+  font-size: 2rem; }
+
+.post-title small {
+  font-size: 70%; }
+
+li.comment {
+  padding: 20px;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.05); }
+
+textarea#comment {
+  width: 50%; }
+
+.bisque .post-title a:hover {
+  color: white; }
 
 /*# sourceMappingURL=custom.css.map */
