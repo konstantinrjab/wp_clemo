@@ -2,7 +2,7 @@
   font-family: "Montserrat";
   src: url("../fonts/montserratlight.ttf"); }
 body {
-  font-family: "Montserrat", Arial sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px; }
 
 footer {
@@ -313,15 +313,16 @@ p.icon-left {
   color: black;
   background: linear-gradient(black, black) left bottom no-repeat;
   background-size: 20px 2px; }
-
-#menu-main-menu li.page_item.current_page_item:hover {
-  background: linear-gradient(#ffe1bd, #ffe1bd) left bottom no-repeat;
-  background-size: 20px 2px; }
+  #menu-main-menu li.page_item.current_page_item:hover {
+    background: linear-gradient(#ffe1bd, #ffe1bd) left bottom no-repeat;
+    background-size: 20px 2px; }
 
 #menu-main-menu li.menu-item {
   color: rgba(0, 0, 0, 0.5);
   margin-top: 5px;
   margin-bottom: 5px; }
+  #menu-main-menu li.menu-item:hover {
+    color: #ffe1bd; }
 
 .carousel-image-wrapper img {
   max-width: 100%;
