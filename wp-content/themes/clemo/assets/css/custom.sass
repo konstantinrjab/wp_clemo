@@ -1,3 +1,6 @@
+//!!This file is not included in the style!
+//css file path: themes/clemo/style.css
+
 //Colors
 $magnate: rgb(152, 152, 152)
 $platinum: rgb(229, 229, 229)
@@ -5,9 +8,14 @@ $bisque: rgb(255, 225, 189)
 $container-big: 600px
 $container-small: 350px
 
+//Fonts
+@font-face
+  font-family: 'Montserrat'
+  src: url('../fonts/montserratlight.ttf')
+
 //Global
 body
-  font-family: 'Montserrat', sans-serif
+  font-family: 'Montserrat', Arial sans-serif
   font-size: 18px
 footer
   border-top: 1px solid grey
@@ -148,6 +156,9 @@ a.nav-item
   border-radius: 20px
   &:hover
     border-color: black
+a.btn-white
+  &:hover
+    border-color: black !important
 .black .btn-white
   &:hover
     background-color: $bisque
