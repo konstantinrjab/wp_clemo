@@ -13,7 +13,7 @@ a {
   text-decoration: none;
   color: inherit; }
   a:hover {
-    color: #ffe1bd !important;
+    color: #ffe1bd;
     text-decoration: none; }
 
 img {
@@ -47,7 +47,7 @@ div.hr {
     text-align: center !important; } }
 
 p button {
-  margin-left: 15px; }
+  margin-left: 1px; }
 
 .pt100 {
   padding-top: 100px; }
@@ -173,10 +173,8 @@ a.nav-item {
   border: 1px solid #e5e5e5;
   border-radius: 20px; }
   .btn-white:hover {
-    border-color: black; }
-
-a.btn-white:hover {
-  border-color: black !important; }
+    border-color: black;
+    color: black; }
 
 .black .btn-white:hover {
   background-color: #ffe1bd; }
@@ -196,7 +194,7 @@ a.btn-white:hover {
   z-index: 10; }
 
 .popup a:hover {
-  color: white !important; }
+  color: white; }
 
 .img-wrapper {
   position: relative;
@@ -205,7 +203,7 @@ a.btn-white:hover {
   text-align: center; }
   @media (max-width: 768px) {
     .img-wrapper {
-      height: 350px !important; } }
+      height: 400px; } }
   .img-wrapper:hover .popup {
     display: block; }
 
@@ -214,10 +212,16 @@ a.btn-white:hover {
   height: 100%; }
 
 .img-wrapper-big {
-  height: 600px; }
+  height: 550px; }
+  @media (max-width: 768px) {
+    .img-wrapper-big {
+      height: 385px; } }
 
 .img-wrapper-small {
-  height: 350px; }
+  height: 400px; }
+  @media (max-width: 768px) {
+    .img-wrapper-small {
+      height: 280px; } }
 
 @media (min-width: 576px) {
   div.p-0 div.img-wrapper-small {

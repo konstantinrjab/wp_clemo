@@ -172,6 +172,8 @@ function add_custom_css() {
 	wp_enqueue_style('font-awesome', get_template_directory_uri().'/assets/css/font-awesome.min.css');
 	//main
 	wp_enqueue_style('main', get_template_directory_uri().'/style.css');
+	//custom
+	wp_enqueue_style('custom', get_template_directory_uri().'/assets/css/custom.css');
 }
 
 add_action('wp_enqueue_scripts', 'add_custom_css');
