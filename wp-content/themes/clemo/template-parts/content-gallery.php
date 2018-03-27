@@ -15,7 +15,7 @@ $loop           = new WP_Query(array(
 	    <?php while ($loop->have_posts()) :
 		    $loop->the_post(); ?>
 
-          <div class="img-wrapper col-sm-6 col-md-4 col-lg-3 img-wrapper-small">
+          <div class="img-wrapper col-sm-6 col-lg-4 col-xl-3 img-wrapper-small">
 		      <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),
 			      'single-post-thumbnail'); ?>
             <img src="<?php echo $image[0]; ?>">

@@ -13,13 +13,15 @@
 
 </div><!-- #content -->
 
-<footer class="container">
-  <div class="row">
-    <div class="col-12 text-center pt-3">
-      <p class="bold">
-		  <?php bloginfo('name'); ?> &copy; <?php echo date('Y'); ?>
-      </p>
-      <p>all rights reserved</p>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center pt-3">
+        <p class="bold">
+		    <?php bloginfo('name'); ?> &copy; <?php echo date('Y'); ?>
+        </p>
+        <p>all rights reserved</p>
+      </div>
     </div>
   </div>
 </footer>
