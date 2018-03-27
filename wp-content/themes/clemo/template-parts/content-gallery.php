@@ -33,7 +33,7 @@ $loop           = new WP_Query(array(
 	  <?php
     //pagination cond
 
-    if ($count % 6 == 0) : ?>
+    if (0) : ?>
     <div class="row">
       <button class="btn btn-default btn-black mt-3 mb-3 margin-auto">view more</button>
     </div>
