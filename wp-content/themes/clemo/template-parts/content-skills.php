@@ -22,10 +22,9 @@ $feature_button_text = get_field('skill_button_text');
               <div class="hr margin-auto"></div>
               <p><?php the_field('skill_text'); ?></p>
 				<?php if (get_field('skill_add_button')) : ?>
-                  <form action="<?php the_field('skill_button_link'); ?>">
-                    <input class="btn btn-default btn-black mt50" type="submit"
-                           value="<?php the_field('skill_button_text'); ?>"/>
-                  </form>
+                  <a class="btn btn-default btn-black mt-3 mb-3 margin-auto" href="<?php the_field('skill_button_link'); ?>">
+                      <?php the_field('skill_button_text'); ?>
+                  </a>
 				<?php endif; ?>
             </div>
           </div>

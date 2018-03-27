@@ -14,7 +14,6 @@ $loop = new WP_Query(array(
 	'order'          => 'DESC'
 )); ?>
 <!--CONTACTS-->
-<?php echo '<p style="color: red">'.get_page_template_slug().'</p>'?>
 <section class="contacts <?php echo $class; ?> pb-5">
   <div class="container">
     <div class="row">
