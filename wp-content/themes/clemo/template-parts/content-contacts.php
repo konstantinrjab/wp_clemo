@@ -2,9 +2,12 @@
 if (get_page_template_slug() == 'page-contacts.php') {
 	$class = 'border-top';
 	$title = 'contacts_section_header';
-} else {
+} elseif (get_page_template_slug() == 'page-home.php') {
 	$class = 'black';
 	$title = 'home-contacts_section_header';
+} else {
+	$class = 'black';
+	$title = 'about-us-contacts_section_header';
 }
 
 $loop = new WP_Query(array(

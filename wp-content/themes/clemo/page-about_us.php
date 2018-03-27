@@ -3,17 +3,16 @@
 	The template name: About Us
 */
 
-get_header(); ?>
+get_header();
 
-<?php get_template_part( 'template-parts/content', 'about_us' ); ?>
+get_template_part('template-parts/content', 'about_us');
 
-<?php get_template_part( 'template-parts/content', 'achievements' ); ?>
+get_template_part('template-parts/content', 'achievements');
 
-<?php get_template_part( 'template-parts/content', 'team' ); ?>
+get_template_part('template-parts/content', 'team');
 
-<?php get_template_part( 'template-parts/content', 'reviews' ); ?>
+get_template_part('template-parts/content', 'reviews');
 
-<?php get_template_part( 'template-parts/content', 'contacts' ); ?>
+get_template_part('template-parts/content', 'contacts');
 
-
-<?php get_footer();
+get_footer();
