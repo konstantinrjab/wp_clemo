@@ -2,7 +2,7 @@
 //echo 'content-single.php';
 ?>
 <!--POST SINGLE-->
-<h3 class="post-title m-auto pb100 text-center"><?php the_title(); ?>
+<h3 class="post-title m-auto pb-5 text-center"><?php the_title(); ?>
     <br>
 	<small><?php clemo_posted_on(); ?></small>
 </h3>
