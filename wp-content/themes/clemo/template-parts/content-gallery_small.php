@@ -53,7 +53,7 @@ $count          = 0;
 		} ?>
 			<?php
 			if ( $count % 6 == 0 ) : ?>
-				<a href="<?php echo esc_url( get_page_link( 120 ) ); ?>" class="btn btn-default btn-black mt30 mb50 margin-auto">view more</a>
+				<a href="/index.php?page_id=120" class="btn btn-default btn-black mt30 mb50 margin-auto">view more</a>
 				</div><!-- gallery -->
 			<?php endif; ?>
 		<?php endwhile; ?>

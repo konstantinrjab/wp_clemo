@@ -2,9 +2,6 @@
 if (get_page_template_slug() == 'page-home.php') {
 	$page           = 'home';
 	$posts_per_page = 6;
-} else {
-	$page           = '';
-	$posts_per_page = 0;
 }
 $loop  = new WP_Query(array(
 	'post_type'      => 'work',

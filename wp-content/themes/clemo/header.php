@@ -18,6 +18,7 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
 
     <!-- Fonts -->
+<!--  LOCAL-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="<?php bloginfo( 'stylesheet_directory' ) ?>/assets/fonts/fontawesome-webfont.woff2"
           rel="text/css">
