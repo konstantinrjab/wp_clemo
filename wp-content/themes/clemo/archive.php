@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<section class="border-top border-bottom">
+	<section class="border-top">
 		<main id="main" class="container">
 
 		<?php

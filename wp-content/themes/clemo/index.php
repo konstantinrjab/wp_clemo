@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-  <section class="blog pb50 border-top border-bottom">
+  <section class="blog pb-3 border-top">
     <div class="container">
       <h1 class="section-title">blog</h1>
       <ul class="list-inline text-center pt50 pb50">
@@ -43,7 +43,6 @@ get_header(); ?>
               <header>
                 <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
               </header>
-
 			<?php
 			endif;
 

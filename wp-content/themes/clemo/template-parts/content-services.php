@@ -23,19 +23,23 @@ $loop = new WP_Query(array(
 		  <?php $count++; ?>
         <div class="row">
 			<?php if ($count % 2) {
-				$class_img  = ' order-1 order-md-2 ';
-				$class_text = ' order-2 order-md-1 ';
+				$class_img  = 'col-md-6 order-1 order-md-2 ';
+				$class_text = 'col-md-6 order-2 order-md-1 ';
 			} else {
-				$class_img  = '';
-				$class_text = '';
-			} ?>
+				$class_img  = 'col-md-6 ';
+				$class_text = 'col-md-6 ';
+			}
+			?>
 
-          <div class="col-md-6 thumbnail-wrapper <?php echo $class_img; ?>">
-			  <?php if (has_post_thumbnail()) {  //check for feature image
-				  the_post_thumbnail();
-			  } ?>
-          </div>
-          <div class="col-md-6 <?php echo $class_text; ?>">
+			<?php if (has_post_thumbnail($post->ID)) : ?>
+              <div class="thumbnail-wrapper <?php echo $class_img; ?>">
+				  <?php the_post_thumbnail(); ?>
+              </div>
+			<?php else :
+				$class_text = 'col-12';
+			endif; ?>
+
+          <div class="<?php echo $class_text; ?>">
             <h2 class="title">
               <a href="<?php the_permalink(); ?>">
                 <small><?php the_field('service_subtitle'); ?></small>
