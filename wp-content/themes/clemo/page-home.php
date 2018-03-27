@@ -5,7 +5,9 @@
 
 get_header();
 
+
 get_template_part('template-parts/content', 'skills');
+
 
 get_template_part('template-parts/content', 'services');
 
