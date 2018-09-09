@@ -29,7 +29,7 @@ $loop  = new WP_Query( array(
 				} else {
 					$class_img = '';
 					$class_text = '';
-				} ?>
+				} ?>  
 
                 <div class="col-sm-6 thumbnail-wrapper <?php echo $class_img; ?>">
 					<?php if ( has_post_thumbnail() ) {  //check for feature image
