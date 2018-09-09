@@ -1,0 +1,273 @@
+//Colors
+$magnate: rgb(152, 152, 152)
+$platinum: rgb(229, 229, 229)
+$bisque: rgb(255, 225, 189)
+$container-big: 600px
+$container-small: 350px
+
+//Global
+body
+  font-family: 'Montserrat', sans-serif
+  font-size: 18px
+a
+  cursor: default
+  text-decoration: none
+  color: inherit
+  &:hover
+    color: $bisque !important
+    text-decoration: none
+img
+  object-fit: fill
+  object-position: 50% 50%
+  overflow: hidden
+  max-width: 100%
+div.hr
+  height: 2px
+  width: 50px
+  background-color: black
+  margin-top: 20px
+  margin-bottom: 20px
+
+.icon-wrapper
+  width: 10px
+.bisque
+  background-color: $bisque
+
+.bold
+  font-weight: bold
+.margin-auto
+  margin: auto
+
+.sm-center
+  @media (max-width: 576px)
+    margin: auto !important
+    text-align: center  !important
+p button
+  margin-left: 15px
+.pt100
+  padding-top: 100px
+  @media (max-width: 768px)
+    padding-top: 50px
+.pb100
+  padding-bottom: 100px
+  @media (max-width: 768px)
+    padding-bottom: 50px
+.pr30
+  padding-right: 30px
+.pl50
+  padding-left: 50px
+.pt50
+  padding-top: 50px
+  @media (max-width: 768px)
+    padding-top: 20px
+.pb50
+  //padding-bottom: 50px !important
+  padding-bottom: 50px
+  @media (max-width: 768px)
+    padding-bottom: 20px
+.mt0
+  margin-top: 0 !important
+  @media (max-width: 576px)
+    margin-top: inherit
+.mt50
+  margin-top: 50px
+  @media (max-width: 768px)
+    margin-top: 20px
+.mb50
+  margin-bottom: 50px
+  @media (max-width: 768px)
+    margin-bottom: 20px
+.mb100
+  margin-bottom: 100px
+  @media (max-width: 768px)
+    margin-bottom: 50px
+
+//NAVBAR
+span .navbar-toggler
+  background-color: black
+nav.navbar
+  //margin-top: 50px
+  padding: 0
+  //min-height: 150px
+  background-color: white
+a.nav-item.active
+  background: linear-gradient(black,black) left bottom no-repeat
+  background-size: 20px 2px
+a.nav-item
+  padding-left: 0 !important
+  padding-right: 30px !important
+
+//Carousel
+#banner-owl
+  position: relative
+  padding-bottom: 80px
+#banner-owl .banner-carousel .owl-stage-outer
+  min-height: 300px
+#banner-owl .owl-dots
+  position: absolute
+  right: 30px
+  top: 50%
+  transform: translateY(-50%)
+#banner-owl .owl-dots .owl-dot
+  display: block
+.owl-carousel .owl-dot
+  cursor: default
+.owl-carousel.owl-theme .owl-dots .owl-dot.active span
+  background-color: black
+.owl-theme .owl-dots .owl-dot span
+  background-color: inherit
+  border: 1px solid black
+.owl-theme .owl-dots .owl-dot
+  &:hover
+    span
+      background-color: inherit
+.carousel-image-wrapper
+  height: 170px
+  width: 170px
+  margin-bottom: 20px
+  @media (max-width: 768px)
+    height: 100px
+    width: 100px
+
+//Buttons
+.btn
+  min-width: 150px
+.btn-black
+  color: white
+  background-color: black
+  border-radius: 20px
+  &:hover
+    background-color: $bisque
+    color: black
+.btn-white
+  color: black
+  background-color: white
+  border: 1px solid $platinum
+  border-radius: 20px
+  &:hover
+    border-color: black
+.black .btn-white
+  &:hover
+    background-color: $bisque
+
+//Gallery
+.gallery-wrapper
+  margin-bottom: 20px
+.popup
+  display: none
+  position: absolute
+  bottom: 15px
+  left: 15px
+  right: 15px
+  width: calc(100% - 30px)
+  text-align: center
+  background-color: $bisque
+  z-index: 10
+.popup a
+  &:hover
+    color: white  !important
+//.img-last
+//  width: calc(100% - 45px)
+//  &:last-child .popup
+//    left: 30px
+
+.img-wrapper
+  position: relative
+  overflow: hidden
+  margin-bottom: 30px
+  text-align: center
+  @media (max-width: 768px)
+    height: $container-small !important
+  &:hover
+    .popup
+      display: block
+.img-wrapper img
+  width: auto
+  height: 100%
+.img-wrapper-big
+  height: $container-big
+.img-wrapper-small
+  height: $container-small
+//.img-last
+//  @media (max-width: 576px)
+//    padding-right: 0 !important
+//    padding-left: 0
+//  @media (max-width: 992px)
+//    height: $container-small
+//    display: inline-block
+//    padding-right: 15px
+//    &:last-child
+//      padding-right: 0
+//      @media (max-width: 576px)
+//        padding-right: 15px
+//  @media (min-width: 992px)
+//    &:last-child
+//      padding-left: 0
+
+div.p-0 div.img-wrapper-small
+  @media (min-width: 576px)
+    padding-left: 0
+.btn-gallery
+  margin-top: 20px
+  margin-bottom: 50px
+  @media (max-width: 768px)
+    margin-top: 0
+    margin-bottom: 30px
+
+//SECTION
+.section-title
+  padding-top: 100px
+  padding-bottom: 100px
+  text-align: center
+  @media (max-width: 768px)
+    padding-top: 50px
+    padding-bottom: 50px
+section.black
+  background-color: black
+  color: white
+section.border-top
+  border-top: 1px solid lightgray
+.border-bottom
+  border-bottom: 1px solid lightgray
+input.contact
+  background: inherit
+  border: none
+  border-bottom: 1px solid grey
+  width: 100%
+  height: 60px
+.black input
+  color: white
+.black input.btn
+  color: black
+.share.responsive .share-wrapper
+  margin-left: 5px
+  margin-right: 5px
+  @media (max-width: 380px)
+    &:nth-child(2)
+      margin-right: 80px
+.share-wrapper
+  height: 40px
+  width: 40px
+  background-color: black
+  color: white
+  text-align: center
+  font-size: 25px
+  line-height: 40px
+  display: inline-block
+  margin-right: 20px
+  &:last-child
+    margin-right: 0
+  &:hover
+    background-color: $bisque
+.black .share-wrapper
+  color: black
+  background-color: white
+  &:hover
+    background-color: $bisque
+
+
+p.icon-left
+  margin-top: -25px
+  padding-left: 35px
+.quote
+  margin-left: -50px
