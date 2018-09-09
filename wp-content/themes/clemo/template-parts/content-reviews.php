@@ -7,7 +7,7 @@ $loop = new WP_Query( array(
 <!--REVIEWS-->
 <section class="reviews pb100">
     <div class="container">
-        <h1 class="section-title pb50"><?php the_field( 'reviews_title' ); ?></h1>
+        <h1 class="section-title"><?php the_field( 'reviews_header' ); ?></h1>
         <div class="row">
 			<?php while ( $loop->have_posts() ) :
 				$loop->the_post(); ?>
@@ -24,7 +24,7 @@ $loop = new WP_Query( array(
 			<?php endwhile; ?>
 
             <!--CAROUSEL-->
-            <div class="owl-carousel owl-theme pt50" id="reviews">
+            <div class="owl-carousel owl-theme" id="reviews">
 
 				<?php while ( $loop->have_posts() ) :
 					$loop->the_post();
