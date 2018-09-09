@@ -4,9 +4,9 @@
 	'order'     => 'ASC'
 ) ); ?>
 
-<!--BEST TEAM-->
-<section class="best-team bisque pb100">
-    <h1 class="section-title pb50"><?php the_field( 'team_section_title' ); ?></h1>
+<!-- TEAM -->
+<section class="best-team bisque">
+    <h1 class="section-title pb50"><?php the_field( 'team_title' ); ?></h1>
     <div class="owl-carousel owl-theme" id="best-team-owl">
 		<?php while ( $loop->have_posts() ) :
 			$loop->the_post(); ?>
@@ -26,7 +26,7 @@
                 <div class="hr margin-auto"></div>
                 <p><?php the_field( 'member_position' ); ?></p>
             </div>
-		<?php endwhile;
-		wp_reset_query(); ?>
+		<?php endwhile; ?>
     </div>
 </section>
+<?php wp_reset_query(); ?>

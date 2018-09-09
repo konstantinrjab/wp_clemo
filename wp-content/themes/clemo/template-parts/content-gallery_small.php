@@ -12,7 +12,7 @@ $count          = 0;
 <!--Gallery-->
 <section class="gallery">
     <div class="container">
-        <h1 class="section-title"><?php the_field( 'header' ); ?></h1>
+        <h1 class="section-title"><?php the_field( 'works_header' ); ?></h1>
 
 		<?php while ( $loop->have_posts() ) :
 			$loop->the_post(); ?>
@@ -32,7 +32,7 @@ $count          = 0;
 			}
 
 			if ( $count == 1 || $count % 7 == 0 ) { //create block
-				echo '<div class="row pt100">';
+				echo '<div class="row">';
 			} ?>
 
 			<?php if ( $count % 2 ) {

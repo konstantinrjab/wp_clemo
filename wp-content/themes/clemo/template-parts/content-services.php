@@ -16,13 +16,13 @@ $loop  = new WP_Query( array(
 <!--SERVICES-->
 <section class="services">
     <div class="container">
-        <h1 class="section-title"><?php the_field( 'header' ); ?></h1>
+        <h1 class="section-title pb-2"><?php the_field( 'services_header' ); ?></h1>
 
 		<?php while ( $loop->have_posts() ) :
 			$loop->the_post(); ?>
 
 			<?php $count ++; ?>
-            <div class="row pt100">
+            <div class="row pt-2 pb-2">
 				<?php if ( $count & 1 ) {
 					$class_img = ' order-1 order-sm-2 ';
 					$class_text = ' order-2 order-sm-1 ';
@@ -55,7 +55,7 @@ $loop  = new WP_Query( array(
                 </div>
             </div>
 
-		<?php endwhile;
-		wp_reset_query(); ?>
+		<?php endwhile; ?>
     </div>
 </section>
+<?php wp_reset_query(); ?>

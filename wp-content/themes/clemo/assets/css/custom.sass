@@ -2,19 +2,24 @@
 $magnate: rgb(152, 152, 152)
 $platinum: rgb(229, 229, 229)
 $bisque: rgb(255, 225, 189)
-$container-big: 600px
-$container-small: 350px
+$container-big: 550px
+$container-small: 400px
 
 //Global
+@font-face
+  font-family: "Montserrat"
+  src: url("../fonts/Montserrat-Regular.ttf")
 body
   font-family: 'Montserrat', sans-serif
   font-size: 18px
+footer
+  border-top: 1px solid lightgray
 a
   cursor: default
   text-decoration: none
   color: inherit
   &:hover
-    color: $bisque !important
+    color: $bisque
     text-decoration: none
 img
   object-fit: fill
@@ -40,18 +45,18 @@ div.hr
 
 .sm-center
   @media (max-width: 576px)
-    margin: auto !important
-    text-align: center  !important
+    margin: auto
+    text-align: center
 p button
-  margin-left: 15px
+  margin-left: 5px
 .pt100
-  padding-top: 100px
+  padding-top: 80px
   @media (max-width: 768px)
-    padding-top: 50px
+    padding-top: 40px
 .pb100
-  padding-bottom: 100px
+  padding-bottom: 80px
   @media (max-width: 768px)
-    padding-bottom: 50px
+    padding-bottom: 40px
 .pr30
   padding-right: 30px
 .pl50
@@ -61,8 +66,7 @@ p button
   @media (max-width: 768px)
     padding-top: 20px
 .pb50
-  //padding-bottom: 50px !important
-  padding-bottom: 50px
+  padding-bottom: 40px
   @media (max-width: 768px)
     padding-bottom: 20px
 .mt0
@@ -70,31 +74,29 @@ p button
   @media (max-width: 576px)
     margin-top: inherit
 .mt50
-  margin-top: 50px
+  margin-top: 40px
   @media (max-width: 768px)
     margin-top: 20px
 .mb50
-  margin-bottom: 50px
+  margin-bottom: 40px
   @media (max-width: 768px)
     margin-bottom: 20px
 .mb100
-  margin-bottom: 100px
+  margin-bottom: 80px
   @media (max-width: 768px)
-    margin-bottom: 50px
+    margin-bottom: 40px
 
-//NAVBAR
+// NAVBAR
 span .navbar-toggler
   background-color: black
 nav.navbar
-  //margin-top: 50px
   padding: 0
-  //min-height: 150px
   background-color: white
 a.nav-item.active
   background: linear-gradient(black,black) left bottom no-repeat
   background-size: 20px 2px
 a.nav-item
-  padding-left: 0 !important
+  padding-left: 0
   padding-right: 30px !important
 
 //Carousel
@@ -146,9 +148,12 @@ a.nav-item
   border-radius: 20px
   &:hover
     border-color: black
+    color: black
 .black .btn-white
   &:hover
     background-color: $bisque
+.thumbnail-wrapper img
+  max-height: 400px
 
 //Gallery
 .gallery-wrapper
@@ -166,10 +171,6 @@ a.nav-item
 .popup a
   &:hover
     color: white  !important
-//.img-last
-//  width: calc(100% - 45px)
-//  &:last-child .popup
-//    left: 30px
 
 .img-wrapper
   position: relative
@@ -177,7 +178,7 @@ a.nav-item
   margin-bottom: 30px
   text-align: center
   @media (max-width: 768px)
-    height: $container-small !important
+    height: $container-small
   &:hover
     .popup
       display: block
@@ -186,23 +187,13 @@ a.nav-item
   height: 100%
 .img-wrapper-big
   height: $container-big
+  @media (max-width: 768px)
+  .img-wrapper-big
+    height: 385px
 .img-wrapper-small
   height: $container-small
-//.img-last
-//  @media (max-width: 576px)
-//    padding-right: 0 !important
-//    padding-left: 0
-//  @media (max-width: 992px)
-//    height: $container-small
-//    display: inline-block
-//    padding-right: 15px
-//    &:last-child
-//      padding-right: 0
-//      @media (max-width: 576px)
-//        padding-right: 15px
-//  @media (min-width: 992px)
-//    &:last-child
-//      padding-left: 0
+  @media (max-width: 768px)
+    height: 280px
 
 div.p-0 div.img-wrapper-small
   @media (min-width: 576px)
@@ -216,12 +207,12 @@ div.p-0 div.img-wrapper-small
 
 //SECTION
 .section-title
-  padding-top: 100px
-  padding-bottom: 100px
+  padding-top: 65px
+  padding-bottom: 65px
   text-align: center
   @media (max-width: 768px)
-    padding-top: 50px
-    padding-bottom: 50px
+    padding-top: 30px
+    padding-bottom: 30px
 section.black
   background-color: black
   color: white
@@ -265,9 +256,77 @@ input.contact
   &:hover
     background-color: $bisque
 
-
 p.icon-left
   margin-top: -25px
   padding-left: 35px
 .quote
   margin-left: -50px
+
+//NAVBAR
+#menu-main-menu li
+  margin-left: 30px
+
+#menu-main-menu li.page_item.current_page_item
+  color: black
+  background: linear-gradient(black, black) left bottom no-repeat
+  background-size: 20px 2px
+#menu-main-menu li.page_item.current_page_item:hover
+  background: linear-gradient(#ffe1bd, #ffe1bd) left bottom no-repeat
+  background-size: 20px 2px
+
+#menu-main-menu li.menu-item
+  color: rgba(0, 0, 0, 0.5)
+  margin-top: 5px
+  margin-bottom: 5px
+#menu-main-menu li.menu-item:hover
+  color: #ffe1bd
+
+.carousel-image-wrapper img
+  max-width: 100%
+  max-height: 100%
+
+.img-wrapper img
+  width: 100%
+  height: 100%
+
+.gallery .img-wrapper img
+  width: 100%
+  height: 100%
+
+p.post-subtitle
+  font-size: 1.5rem
+
+.share-wrapper:last-child
+  margin-right: 0
+
+blockquote
+  margin-left: 50px
+  font-weight: bold
+  font-size: 21px
+  background: linear-gradient(black, black) left top no-repeat
+  background-size: 40px 2px
+  padding-top: 10px
+
+.left-half
+  text-align: right
+  padding-right: 30px
+
+.left-half p
+  min-height: 60px
+
+.post-title
+  font-size: 2rem
+
+.post-title small
+  font-size: 70%
+
+li.comment
+  padding: 20px
+  margin: 10px
+  background-color: rgba(0, 0, 0, 0.05)
+
+textarea#comment
+  width: 50%
+
+.bisque .post-title a:hover
+  color: white

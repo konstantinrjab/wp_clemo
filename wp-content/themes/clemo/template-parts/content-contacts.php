@@ -11,15 +11,13 @@ $loop = new WP_Query(array(
     'order' => 'DESC'
 ));
 
-echo the_content();
-
 ?>
     <!--CONTACTS-->
 <section class="contacts <?php echo $class; ?> pb100">
     <div class="container">
     <div class="row">
     <div class="col-12">
-        <h2 class="section-title pb50"><?php the_field('header'); ?></h2>
+        <h2 class="section-title pb50"><?php the_field('contacts_header'); ?></h2>
     </div>
 <?php while ($loop->have_posts()) :
     $loop->the_post(); ?>

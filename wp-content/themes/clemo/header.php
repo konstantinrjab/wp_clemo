@@ -18,9 +18,8 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link href="<?php bloginfo( 'stylesheet_directory' ) ?>/assets/fonts/fontawesome-webfont.woff2"
-          rel="text/css">
+    <link href="<?php bloginfo( 'stylesheet_directory' ) ?>/assets/fonts/fontawesome-webfont.woff2" rel="text/css">
+    <link href="<?php bloginfo( 'stylesheet_directory' ) ?>/assets/fonts/Montserrat-Regular.ttf" rel="text/css">
 
 	<?php wp_head(); ?>
 
@@ -40,7 +39,6 @@
         <!-- NAVBAR-->
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light navbar-header mt50 mb50">
-<!--                <a class="nav"></a>-->
                 <div class="bar-brand">
                     <a href="<?php get_home_url(); ?>">
 						<?php the_custom_logo(); ?>

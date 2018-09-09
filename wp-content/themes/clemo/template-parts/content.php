@@ -11,26 +11,28 @@
 
 <div class="container">
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <header class="entry-header">
-			<?php
-			if ( is_singular() ) :
-				the_title( '<h1 class="entry-title section-title">', '</h1>' );
-			else :
-				the_title( '<h2 class="entry-title section-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-			endif;
-			?>
-            <p class="post-subtitle"><?php echo get_the_date(); ?></p>
-			<?php
-			if ( 'post' === get_post_type() ) : ?>
-                <div class="entry-meta">
-					<?php clemo_posted_on(); ?>
-                </div><!-- .entry-meta -->
-				<?php
-			endif; ?>
+        <header class="entry-header row">
+			<div class="col-12">
+                <?php
+                if ( is_singular() ) :
+                    the_title( '<h1 class="entry-title section-title">', '</h1>' );
+                else :
+                    the_title( '<h2 class="entry-title section-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+                endif;
+                ?>
+                <p class="post-subtitle"><?php echo get_the_date(); ?></p>
+                <?php
+                if ( 'post' === get_post_type() ) : ?>
+                    <div class="entry-meta">
+                        <?php clemo_posted_on(); ?>
+                    </div><!-- .entry-meta -->
+                <?php
+                endif; ?>
+            </div>
         </header><!-- .entry-header -->
 
-        <div class="entry-content">
-            <div class="col-md-8 offset-2">
+        <div class="entry-content row">
+            <div class="col-md-10 offset-1">
 				<?php if ( has_post_thumbnail() ) :   //check for feature image ?>
                     <div class="text-center"><?php the_post_thumbnail( 'large' ); ?></div>
 				<?php endif; ?>
@@ -61,17 +63,15 @@
 				) );
 				?>
             </div>
-	        <?php
-            if ( get_post_gallery() ) :
-            $gallery = get_post_gallery( get_the_ID(), false );
-
-            var_dump($gallery);
-            /* Loop through all the image and output them one by one */
-            foreach( $gallery['src'] as $src ) : ?>
-            <img src="<?php echo $src; ?>" class="my-custom-class" alt="Gallery image" />
-
-	        <?php endforeach; ?>
-            <?php endif; ?>
+<!--	        --><?php
+//            if ( get_post_gallery() ) :
+//            $gallery = get_post_gallery( get_the_ID(), false );
+//
+//            foreach( $gallery['src'] as $src ) : ?>
+<!--            <img src="--><?php //echo $src; ?><!--" class="my-custom-class" alt="Gallery image" />-->
+<!---->
+<!--	        --><?php //endforeach; ?>
+<!--            --><?php //endif; ?>
 
         </div><!-- .entry-content -->
 
